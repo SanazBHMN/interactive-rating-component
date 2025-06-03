@@ -1,5 +1,11 @@
+import RateCard from "./components/RateCard";
+
 function App() {
-  return <h1 className="text-paragraph p-4 pt-3">Hello World!</h1>;
+  return (
+    <main className="flex h-screen items-center justify-center">
+      <RateCard />
+    </main>
+  );
 }
 
 export default App;
