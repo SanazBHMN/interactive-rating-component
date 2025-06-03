@@ -7,7 +7,13 @@ import Title from "./Title";
 import starIcon from "../assets/images/icon-star.svg";
 import CardWrapper from "./CardWrapper";
 
-const RateCard = () => {
+interface RateCardProps {
+  ratings: number[];
+  onSubmit: () => void;
+  onRateSelection: (rate: number) => void;
+}
+
+const RateCard = ({ ratings, onSubmit, onRateSelection }: RateCardProps) => {
   return (
     <CardWrapper>
       <img
@@ -20,8 +26,8 @@ const RateCard = () => {
         Please let us know how we did with your support request. All feedback is
         appreciated to help us improve our offering!
       </TextParagraph>
-      <Rate />
-      <Button />
+      <Rate ratings={ratings} onRateSelection={onRateSelection} />
+      <Button onHandleClick={onSubmit} />
     </CardWrapper>
   );
 };
