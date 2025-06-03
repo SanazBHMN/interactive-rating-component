@@ -5,10 +5,11 @@ import TextParagraph from "./TextParagraph";
 import Title from "./Title";
 // import statics
 import starIcon from "../assets/images/icon-star.svg";
+import CardWrapper from "./CardWrapper";
 
 const RateCard = () => {
   return (
-    <div className="bg-grey-900 mx-auto w-96 rounded-2xl p-8">
+    <CardWrapper>
       <img
         src={starIcon}
         alt="An orange star"
@@ -21,7 +22,7 @@ const RateCard = () => {
       </TextParagraph>
       <Rate />
       <Button />
-    </div>
+    </CardWrapper>
   );
 };
 
