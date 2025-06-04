@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 // import components
 import RateCard from "./components/RateCard";
 import ThankYouCard from "./components/ThankYouCard";
+import Attribution from "./components/Attribution";
 
 function App() {
   const ratings = useRef([1, 2, 3, 4, 5]);
@@ -21,7 +22,7 @@ function App() {
   };
 
   return (
-    <main className="flex h-screen w-full items-center justify-center">
+    <main className="flex h-screen w-full flex-col items-center justify-center">
       {!isRateSubmitted && (
         <RateCard
           ratings={ratings.current}
@@ -31,6 +32,7 @@ function App() {
         />
       )}
       {isRateSubmitted && <ThankYouCard rate={selectedRate} />}
+      <Attribution />
     </main>
   );
 }
