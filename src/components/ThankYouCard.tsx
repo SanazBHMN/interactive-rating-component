@@ -11,14 +11,15 @@ interface ThankYouCardProps {
 
 const ThankYouCard = ({ rate }: ThankYouCardProps) => {
   return (
-    <CardWrapper classes="p-12 text-center">
+    <CardWrapper classes="text-center">
       <img
         src={img}
         alt="A mobile device connecting to a card."
         className="mx-auto"
       />
-      <p>You selected {rate} out of 5</p>
-      {/* TODO: Display selected rating */}
+      <p className="text-primary bg-grey-950 mx-auto mt-5 mb-8 w-fit rounded-full px-4 py-2 text-[14px]">
+        You selected {rate} out of 5
+      </p>
       <Title>Thank you!</Title>
       <TextParagraph>
         We appreciate you taking the time to give a rating. If you ever need

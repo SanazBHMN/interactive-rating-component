@@ -1,5 +1,5 @@
-// import components
 import { useRef, useState } from "react";
+// import components
 import RateCard from "./components/RateCard";
 import ThankYouCard from "./components/ThankYouCard";
 
@@ -17,12 +17,13 @@ function App() {
   };
 
   return (
-    <main className="flex h-screen items-center justify-center">
+    <main className="flex h-screen w-full items-center justify-center">
       {!isRateSubmitted && (
         <RateCard
           ratings={ratings.current}
           onSubmit={handleSubmit}
           onRateSelection={handleSelectedRate}
+          selectedRate={selectedRate}
         />
       )}
       {isRateSubmitted && <ThankYouCard rate={selectedRate} />}
