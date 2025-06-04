@@ -9,7 +9,11 @@ function App() {
   const [isRateSubmitted, setIsRateSubmitted] = useState<boolean>(false);
 
   const handleSubmit = () => {
-    if (selectedRate) setIsRateSubmitted(true);
+    if (selectedRate) {
+      setIsRateSubmitted(true);
+    } else {
+      alert("Please select a rating before submitting.");
+    }
   };
 
   const handleSelectedRate = (rate: number) => {
